@@ -11892,7 +11892,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -11931,7 +11931,7 @@ div#notebook {
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>erro: &lt;a href=&#34;#main-content&#34;&gt;Skip to main content&lt;/a&gt;
 erro: &lt;a href=&#34;http://www.mta.info&#34;&gt;&lt;img alt=&#34;To MTA.info homepage&#34; src=&#34;/template/images/mta_info.gif&#34;/&gt;&lt;/a&gt;
 erro: &lt;a href=&#34;/accessibility&#34;&gt;Accessibility&lt;/a&gt;
@@ -11941,65 +11941,11 @@ erro: &lt;a href=&#34;http://www.mta.info&#34; style=&#34;padding-left:18px;&#34
 erro: &lt;a href=&#34;http://www.mta.info&#34;&gt;MTA Home&lt;/a&gt;
 erro: &lt;a name=&#34;main-content&#34;&gt; &lt;/a&gt;
 Downloading:  http://web.mta.info/developers/data/nyct/turnstile/turnstile_170624.txt turnstile_170624.txt
+Downloading:  http://web.mta.info/developers/data/nyct/turnstile/turnstile_170617.txt turnstile_170617.txt
+Downloading:  http://web.mta.info/developers/data/nyct/turnstile/turnstile_170610.txt turnstile_170610.txt
+Downloading:  http://web.mta.info/developers/data/nyct/turnstile/turnstile_170603.txt turnstile_170603.txt
 </pre>
 </div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(&#39;turnstile_170624.txt&#39;, &lt;http.client.HTTPMessage at 0xbe462dda0&gt;)</pre>
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Downloading:  http://web.mta.info/developers/data/nyct/turnstile/turnstile_170617.txt turnstile_170617.txt
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(&#39;turnstile_170617.txt&#39;, &lt;http.client.HTTPMessage at 0xbe462dc50&gt;)</pre>
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Downloading:  http://web.mta.info/developers/data/nyct/turnstile/turnstile_170610.txt turnstile_170610.txt
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(&#39;turnstile_170610.txt&#39;, &lt;http.client.HTTPMessage at 0xbe462df28&gt;)</pre>
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Downloading:  http://web.mta.info/developers/data/nyct/turnstile/turnstile_170603.txt turnstile_170603.txt
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(&#39;turnstile_170603.txt&#39;, &lt;http.client.HTTPMessage at 0xbe462dfd0&gt;)</pre>
-</div>
-
 </div>
 
 </div>
@@ -12032,7 +11978,7 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_master_turnstile_file</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
@@ -12054,7 +12000,7 @@ linha 5...</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">create_master_turnstile_file</span><span class="p">(</span><span class="n">downloadedFiles</span><span class="p">,</span> <span class="s2">&quot;output.txt&quot;</span><span class="p">)</span>
@@ -12069,7 +12015,7 @@ linha 5...</p>
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>Header writed
 Processing file turnstile_170624.txt
 Processing file turnstile_170617.txt
@@ -12108,7 +12054,7 @@ Processing file turnstile_170603.txt
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -12129,7 +12075,7 @@ Processing file turnstile_170603.txt
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">filter_by_regular</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">)</span>
@@ -12144,7 +12090,7 @@ Processing file turnstile_170603.txt
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12277,7 +12223,7 @@ Processing file turnstile_170603.txt
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -12301,7 +12247,7 @@ Processing file turnstile_170603.txt
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_hourly_entries</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -12316,7 +12262,7 @@ Processing file turnstile_170603.txt
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12438,7 +12384,7 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -12458,7 +12404,7 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_hourly_exits</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -12473,7 +12419,7 @@ Para isso crie uma coluna chamada de EXITSn_hourly e insira a diferença entre a
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12610,7 +12556,7 @@ E devolva-o como um número inteiro. Por exemplo:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">time_to_hour</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
@@ -12626,7 +12572,7 @@ E devolva-o como um número inteiro. Por exemplo:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hour</span> <span class="o">=</span> <span class="n">time_to_hour</span><span class="p">(</span><span class="s2">&quot;04:50:50&quot;</span><span class="p">)</span>
@@ -12642,7 +12588,7 @@ E devolva-o como um número inteiro. Por exemplo:</p>
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>4
 </pre>
 </div>
@@ -12670,7 +12616,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -12689,7 +12635,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[34]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12871,12 +12817,12 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">num_rainy_days</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
 
-    <span class="n">rainyDays</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rain&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">rainyDays</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rain&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;DATEn&quot;</span><span class="p">))</span>
 
 
     <span class="c1">#your code here</span>
@@ -12890,7 +12836,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_rainy</span> <span class="o">=</span> <span class="n">num_rainy_days</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -12906,8 +12852,8 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>44104
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
 </pre>
 </div>
 </div>
@@ -12929,7 +12875,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -12943,7 +12889,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12963,7 +12909,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -12981,7 +12927,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_fog</span> <span class="o">=</span> <span class="n">max_temp_aggregate_by_fog</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -12997,7 +12943,7 @@ Nós complementamos para você este arquivo com os dados de clima de Nova Iorque
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[39]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13025,7 +12971,7 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">avg_weekend_temperature</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -13044,7 +12990,7 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">meantempi</span> <span class="o">=</span> <span class="n">avg_weekend_temperature</span><span class="p">(</span><span class="s2">&quot;turnstile_data_master_with_weather.csv&quot;</span><span class="p">)</span>
@@ -13060,7 +13006,7 @@ Name: maxtempi, dtype: float64</pre>
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>65.100666854
 </pre>
 </div>
@@ -13082,7 +13028,7 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">avg_min_temperature</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -13100,7 +13046,7 @@ Name: maxtempi, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">avg_min_temperature</span> <span class="o">=</span> <span class="n">avg_min_temperature</span><span class="p">(</span><span class="s2">&quot;turnstile_data_master_with_weather.csv&quot;</span><span class="p">)</span>
@@ -13116,7 +13062,7 @@ Name: maxtempi, dtype: float64</pre>
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>61.2388603989
 </pre>
 </div>
@@ -13142,7 +13088,7 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13168,7 +13114,7 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">entries_histogram</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -13182,15 +13128,6 @@ Abaixo está um exemplo sobre como traçar histogramas com pandas e matplotlib:<
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area"><div class="prompt output_prompt">Out[48]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;module &#39;matplotlib.pyplot&#39; from &#39;C:\\ProgramData\\Anaconda3\\envs\\tensorflow\\lib\\site-packages\\matplotlib\\pyplot.py&#39;&gt;</pre>
-</div>
-
-</div>
 
 <div class="output_area"><div class="prompt"></div>
 
@@ -13349,7 +13286,7 @@ GpDhIEnqMBwkSR2GgySpw3CQJHUYDpKkDsNBktRhOEiSOv4/uEeKma36Ym8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13373,7 +13310,7 @@ GpDhIEnqMBwkSR2GgySpw3CQJHUYDpKkDsNBktRhOEiSOv4/uEeKma36Ym8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">with_rain_mean</span><span class="p">,</span> <span class="n">without_rain_mean</span> <span class="o">=</span> <span class="n">means</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -13390,7 +13327,7 @@ GpDhIEnqMBwkSR2GgySpw3CQJHUYDpKkDsNBktRhOEiSOv4/uEeKma36Ym8AAAAASUVORK5CYII=
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>1105.44637675 1090.27878015
 </pre>
 </div>
@@ -13439,7 +13376,7 @@ GpDhIEnqMBwkSR2GgySpw3CQJHUYDpKkDsNBktRhOEiSOv4/uEeKma36Ym8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -13449,11 +13386,14 @@ GpDhIEnqMBwkSR2GgySpw3CQJHUYDpKkDsNBktRhOEiSOv4/uEeKma36Ym8AAAAASUVORK5CYII=
     
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;UNIT&#39;</span><span class="p">:</span>
-            <span class="k">continue</span>
-            
+        
         <span class="n">unit</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;UNIT&#39;</span><span class="p">:</span>
+            <span class="k">continue</span>
+            
+        
 
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="se">\t</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
  
@@ -13485,7 +13425,7 @@ GpDhIEnqMBwkSR2GgySpw3CQJHUYDpKkDsNBktRhOEiSOv4/uEeKma36Ym8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">reducer</span><span class="p">():</span>
