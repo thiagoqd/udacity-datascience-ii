@@ -1,0 +1,1020 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.17.0915.2112                               -->
+<workbook source-build='10.4.0 (10400.17.0915.2112)' source-platform='win' version='10.4' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='titanic-data' inline='true' name='federated.13gmn791k7e2wf1am0wig19mpyoh' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='titanic-data' name='textscan.0w31yt816mc0ad12kwrw2183stl8'>
+            <connection class='textscan' directory='D:/Data Science/udacity-DSII/udacity-datascience-ii/Projeto Tableau' filename='titanic-data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0w31yt816mc0ad12kwrw2183stl8' name='titanic-data.csv' table='[titanic-data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR'>
+            <column datatype='string' name='PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]</local-name>
+            <parent-name>[titanic-data.csv]</parent-name>
+            <remote-alias>PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[titanic-data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Cabin' datatype='string' name='[Calculation_668503131944763392]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,12)' />
+      </column>
+      <column caption='Embarked' datatype='string' name='[Calculation_668503131945082882]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,13)' />
+      </column>
+      <column caption='Fare' datatype='real' datatype-customized='true' name='[Calculation_668503131945177091]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,11))' />
+      </column>
+      <column caption='Ticket' datatype='string' name='[Calculation_668503131945238532]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,10)' />
+      </column>
+      <column caption='Parch' datatype='integer' datatype-customized='true' name='[Calculation_668503131945332741]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,9))' />
+      </column>
+      <column caption='SibSp' datatype='integer' datatype-customized='true' name='[Calculation_668503131945422854]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,8))' />
+      </column>
+      <column caption='Age' datatype='real' datatype-customized='true' name='[Calculation_668503131945480199]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='FLOAT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,7))' />
+      </column>
+      <column caption='Sex' datatype='string' name='[Calculation_668503131945562120]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,6)' />
+      </column>
+      <column caption='Name' datatype='string' name='[Calculation_668503131945648137]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='Replace(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,4)&#13;&#10;+&#13;&#10;SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,5),&apos;&quot;&apos;,&apos;&apos;)' />
+      </column>
+      <column caption='Pclass' datatype='integer' datatype-customized='true' name='[Calculation_668503131946287116]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,3))' />
+      </column>
+      <column caption='Survived' datatype='string' datatype-customized='true' name='[Calculation_668503131946356749]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF(INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,2))=1) then &quot;Sim&quot; ELSE &quot;Não&quot; END' />
+      </column>
+      <column caption='PassengerId' datatype='integer' datatype-customized='true' name='[Calculation_668503131946442766]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,1))' />
+      </column>
+      <column caption='Title' datatype='string' name='[Calculation_668503131947941906]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='split(trim(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,5)),&quot; &quot;,1)' />
+      </column>
+      <column caption='RangeAge' datatype='string' name='[Calculation_668503131948806164]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if ([Calculation_668503131945480199]&lt;=5) Then &quot;&lt;=5&quot;&#13;&#10;ELSEIF ([Calculation_668503131945480199]&gt;5 and [Calculation_668503131945480199]&lt;=10) Then &quot;5&lt;x&lt;=10&quot;&#13;&#10;ELSEIF ([Calculation_668503131945480199]&gt;10 and [Calculation_668503131945480199]&lt;=20) Then &quot;10&lt;x&lt;=20&quot;&#13;&#10;ELSEIF ([Calculation_668503131945480199]&gt;20 and [Calculation_668503131945480199]&lt;=30) Then &quot;20&lt;x&lt;=30&quot;&#13;&#10;ELSEIF ([Calculation_668503131945480199]&gt;30 and [Calculation_668503131945480199]&lt;=40) Then &quot;30&lt;x&lt;=40&quot;&#13;&#10;ELSEIF ([Calculation_668503131945480199]&gt;40 and [Calculation_668503131945480199]&lt;=50) Then &quot;40&lt;x&lt;=50&quot;&#13;&#10;ELSEIF ([Calculation_668503131945480199]&gt;50 and [Calculation_668503131945480199]&lt;=60) Then &quot;50&lt;x&lt;=60&quot;&#13;&#10;ELSEIF ([Calculation_668503131945480199]&gt;60 and [Calculation_668503131945480199]&lt;=70) Then &quot;60&lt;x&lt;=70&quot;&#13;&#10;ELSEIF (ISNULL([Calculation_668503131945480199])) Then NULL&#13;&#10;ELSE &quot;&gt;70&quot;&#13;&#10;END' />
+      </column>
+      <column datatype='integer' name='[Fare (compartimento)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='1' formula='[Calculation_668503131945177091]' peg='0' size='23.2' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Número de registros (compartimento)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Number of Records]' peg='0' size='1' />
+      </column>
+      <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_668503131945562120]' derivation='None' name='[none:Calculation_668503131945562120:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_668503131946287116]' derivation='None' name='[none:Calculation_668503131946287116:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_668503131946356749]' derivation='None' name='[none:Calculation_668503131946356749:ok]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.697095' measure-ordering='alphabetic' measure-percentage='0.302905' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_668503131946356749:ok]' type='palette'>
+            <map to='#a8ec4e'>
+              <bucket>&quot;Sim&quot;</bucket>
+            </map>
+            <map to='#ff5050'>
+              <bucket>&quot;Não&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_668503131945562120:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;male&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;female&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='shape' field='[none:Calculation_668503131946287116:ok]' type='shape'>
+            <map to='circle'>
+              <bucket>1</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>3</bucket>
+            </map>
+            <map to='square'>
+              <bucket>2</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked' />
+        <field-sort-custom-order field='Calculation_668503131947941906' />
+        <field-sort-custom-order field='Calculation_668503131946442766' />
+        <field-sort-custom-order field='Calculation_668503131946356749' />
+        <field-sort-custom-order field='Calculation_668503131946287116' />
+        <field-sort-custom-order field='Calculation_668503131945648137' />
+        <field-sort-custom-order field='Calculation_668503131945562120' />
+        <field-sort-custom-order field='Calculation_668503131945480199' />
+        <field-sort-custom-order field='Calculation_668503131948806164' />
+        <field-sort-custom-order field='Calculation_668503131945422854' />
+        <field-sort-custom-order field='Calculation_668503131945332741' />
+        <field-sort-custom-order field='Calculation_668503131945238532' />
+        <field-sort-custom-order field='Calculation_668503131945177091' />
+        <field-sort-custom-order field='Calculation_668503131945082882' />
+        <field-sort-custom-order field='Calculation_668503131944763392' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='% Sobrevivência por Fare'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>O interessante é que mesmo com uma maior quantidade de passageiros que pagaram valores menores, a taxa de sobrevivência se mostra maior em passageiros que pagaram valores mais altos.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic-data' name='federated.13gmn791k7e2wf1am0wig19mpyoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13gmn791k7e2wf1am0wig19mpyoh'>
+            <column caption='Fare' datatype='real' datatype-customized='true' name='[Calculation_668503131945177091]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,11))' />
+            </column>
+            <column caption='Survived' datatype='string' datatype-customized='true' name='[Calculation_668503131946356749]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF(INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,2))=1) then &quot;Sim&quot; ELSE &quot;Não&quot; END' />
+            </column>
+            <column datatype='integer' name='[Fare (compartimento)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='1' formula='[Calculation_668503131945177091]' peg='0' size='23.2' />
+            </column>
+            <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_668503131946356749]' derivation='None' name='[none:Calculation_668503131946356749:ok]' pivot='key' type='nominal' />
+            <column-instance column='[Fare (compartimento)]' derivation='None' name='[none:Fare (compartimento):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_668503131945177091]' derivation='Count' name='[pcto:cnt:Calculation_668503131945177091:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:cnt:Calculation_668503131945177091:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:cnt:Calculation_668503131945177091:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:cnt:Calculation_668503131945177091:qk]</rows>
+        <cols>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Fare (compartimento):qk]</cols>
+        <show-full-range>
+          <column>[federated.13gmn791k7e2wf1am0wig19mpyoh].[Fare (compartimento)]</column>
+        </show-full-range>
+        <percentages enabled='true' mode='column' />
+      </table>
+    </worksheet>
+    <worksheet name='% de Sobrevivência por Idade'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Fica claro também que o índice de sobrevivência também foi maior para crianças até 13 anos. &#10;Temos curiosamente no extremo oposto a maior incidencia de 100% de morte para idades mais avançadas.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic-data' name='federated.13gmn791k7e2wf1am0wig19mpyoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13gmn791k7e2wf1am0wig19mpyoh'>
+            <column caption='Age' datatype='real' datatype-customized='true' name='[Calculation_668503131945480199]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='FLOAT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,7))' />
+            </column>
+            <column caption='Survived' datatype='string' datatype-customized='true' name='[Calculation_668503131946356749]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF(INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,2))=1) then &quot;Sim&quot; ELSE &quot;Não&quot; END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_668503131945480199]' derivation='None' name='[none:Calculation_668503131945480199:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_668503131946356749]' derivation='None' name='[none:Calculation_668503131946356749:ok]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945480199:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_668503131945480199:ok]' />
+              <groupfilter function='member' level='[none:Calculation_668503131945480199:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945480199:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:sum:Number of Records:qk]' scope='rows' value='' />
+            <format attr='subtitle' class='0' field='[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:sum:Number of Records:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:sum:Number of Records:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+              <lod column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945480199:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:sum:Number of Records:qk]</rows>
+        <cols>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945480199:ok]</cols>
+        <percentages enabled='true' mode='column' />
+      </table>
+    </worksheet>
+    <worksheet name='Distribuição por Idade e Sexo da Sobrevivência'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Distribuição da Sobrevivência por Idade e Sexo</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>É interessante notar que mesmo com uma maioria masculina à bordo observamos anteriormente a maior incidência de sobreviventes mulheres do que homens.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic-data' name='federated.13gmn791k7e2wf1am0wig19mpyoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13gmn791k7e2wf1am0wig19mpyoh'>
+            <column caption='Age' datatype='real' datatype-customized='true' name='[Calculation_668503131945480199]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='FLOAT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,7))' />
+            </column>
+            <column caption='Sex' datatype='string' name='[Calculation_668503131945562120]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,6)' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_668503131945480199]' derivation='None' name='[none:Calculation_668503131945480199:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_668503131945562120]' derivation='None' name='[none:Calculation_668503131945562120:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945480199:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_668503131945480199:ok]' />
+              <groupfilter function='member' level='[none:Calculation_668503131945480199:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945480199:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' scope='rows' value='' />
+            <format attr='subtitle' class='0' field='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945562120:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]</rows>
+        <cols>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945480199:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Qtd Sobrevivência por Fare'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>O histograma de Passageiros por valor do Ticket nos mostra uma distribuição enviesada à direito, com maior fequência de passageiros que optaram por tickets mais baratos.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic-data' name='federated.13gmn791k7e2wf1am0wig19mpyoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13gmn791k7e2wf1am0wig19mpyoh'>
+            <column caption='Fare' datatype='real' datatype-customized='true' name='[Calculation_668503131945177091]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,11))' />
+            </column>
+            <column caption='Survived' datatype='string' datatype-customized='true' name='[Calculation_668503131946356749]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF(INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,2))=1) then &quot;Sim&quot; ELSE &quot;Não&quot; END' />
+            </column>
+            <column datatype='integer' name='[Fare (compartimento)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='1' formula='[Calculation_668503131945177091]' peg='0' size='23.2' />
+            </column>
+            <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_668503131945177091]' derivation='Count' name='[cnt:Calculation_668503131945177091:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_668503131946356749]' derivation='None' name='[none:Calculation_668503131946356749:ok]' pivot='key' type='nominal' />
+            <column-instance column='[Fare (compartimento)]' derivation='None' name='[none:Fare (compartimento):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_668503131945177091]' derivation='Count' name='[pcto:cnt:Calculation_668503131945177091:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:cnt:Calculation_668503131945177091:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:cnt:Calculation_668503131945177091:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.13gmn791k7e2wf1am0wig19mpyoh].[cnt:Calculation_668503131945177091:qk]</rows>
+        <cols>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Fare (compartimento):qk]</cols>
+        <show-full-range>
+          <column>[federated.13gmn791k7e2wf1am0wig19mpyoh].[Fare (compartimento)]</column>
+        </show-full-range>
+        <percentages enabled='false' mode='column' />
+      </table>
+    </worksheet>
+    <worksheet name='Relação de Sobrevivência'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Em números gerais h</run>
+            <run fontcolor='#555555'>ouveram mais mortos do que sobreviventes no acidente.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic-data' name='federated.13gmn791k7e2wf1am0wig19mpyoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13gmn791k7e2wf1am0wig19mpyoh'>
+            <column caption='Survived' datatype='string' datatype-customized='true' name='[Calculation_668503131946356749]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF(INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,2))=1) then &quot;Sim&quot; ELSE &quot;Não&quot; END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_668503131946356749]' derivation='None' name='[none:Calculation_668503131946356749:ok]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+              <wedge-size column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' />
+              <size column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' />
+              <text column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Relação de Sobrevivência por Sexo'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Podemos notar que a máxima conhecida: &quot;mulheres e crianças primeiro&quot;, foi realidade no que se refere às mulheres.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic-data' name='federated.13gmn791k7e2wf1am0wig19mpyoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13gmn791k7e2wf1am0wig19mpyoh'>
+            <column caption='Sex' datatype='string' name='[Calculation_668503131945562120]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,6)' />
+            </column>
+            <column caption='Survived' datatype='string' datatype-customized='true' name='[Calculation_668503131946356749]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF(INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,2))=1) then &quot;Sim&quot; ELSE &quot;Não&quot; END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_668503131945562120]' derivation='None' name='[none:Calculation_668503131945562120:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_668503131946356749]' derivation='None' name='[none:Calculation_668503131946356749:ok]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' />
+              <text column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945562120:nk]' />
+              <text column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+              <color column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Sobrevivência por Titulo'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Em uma análise mais detalha pelo título do passageiro podemos notar duas curiosidade:&#10;1 - No grupo das mulheres, que já vimos ter maior incidência de sobrevivência, podemos notar que essa % é acentuada em mulheres casadas (Mrs.).&#10;2 - Assim como podemos notar que para os homens um grau maior de importância social (Master) refleteu em maior índice de sobrevivência.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic-data' name='federated.13gmn791k7e2wf1am0wig19mpyoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13gmn791k7e2wf1am0wig19mpyoh'>
+            <column caption='Survived' datatype='string' datatype-customized='true' name='[Calculation_668503131946356749]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF(INT(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,2))=1) then &quot;Sim&quot; ELSE &quot;Não&quot; END' />
+            </column>
+            <column caption='Title' datatype='string' name='[Calculation_668503131947941906]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='split(trim(SPLIT([PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked],&quot;,&quot;,5)),&quot; &quot;,1)' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' hidden='true' name='[PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_668503131946356749]' derivation='None' name='[none:Calculation_668503131946356749:ok]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_668503131947941906]' derivation='None' name='[none:Calculation_668503131947941906:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131947941906:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_668503131947941906:nk]' />
+              <groupfilter function='union'>
+                <groupfilter from='&quot;Capt.&quot;' function='range' level='[none:Calculation_668503131947941906:nk]' to='&quot;Major.&quot;' />
+                <groupfilter function='member' level='[none:Calculation_668503131947941906:nk]' member='&quot;Mlle.&quot;' />
+                <groupfilter function='member' level='[none:Calculation_668503131947941906:nk]' member='&quot;Mme.&quot;' />
+                <groupfilter from='&quot;Ms.&quot;' function='range' level='[none:Calculation_668503131947941906:nk]' to='&quot;the&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <sort class='computed' column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131947941906:nk]' direction='DESC' using='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' />
+          <slices>
+            <column>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131947941906:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.13gmn791k7e2wf1am0wig19mpyoh].[pcto:sum:Number of Records:qk]</rows>
+        <cols>[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131947941906:nk]</cols>
+        <percentages enabled='true' mode='column' />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dash1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' sizing-mode='fixed' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='81100' x='800' y='1000'>
+              <zone h='32625' id='1' name='Relação de Sobrevivência' show-caption='true' w='32500' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32625' id='9' name='Relação de Sobrevivência por Sexo' show-caption='true' w='48600' x='33300' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='33875' id='11' name='% de Sobrevivência por Idade' show-caption='true' w='81100' x='800' y='65125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='31500' id='12' name='Distribuição por Idade e Sexo da Sobrevivência' show-caption='true' w='81100' x='800' y='33625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='173' h='98000' id='4' is-fixed='true' param='vert' type='layout-flow' w='17300' x='81900' y='1000'>
+              <zone h='5750' id='7' name='Relação de Sobrevivência' pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' type='size' w='17300' x='81900' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8250' id='6' name='Relação de Sobrevivência' pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' w='17300' x='81900' y='6750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8250' id='13' name='Distribuição por Idade e Sexo da Sobrevivência' pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945562120:nk]' type='color' w='17300' x='81900' y='15000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='História 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone fixed-size='110' h='11411' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='83506' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='15664'>
+              <flipboard active-id='2' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Exploração de Sobrevivência no Titanic' captured-sheet='Dash1' id='1'>
+                    <capturedDeltas>
+                      <worksheet name='Relação de Sobrevivência por Sexo'>
+                        <highlight field='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' pattern='Sim' type='highlight'>
+                          <bucket-selection>
+                            <bucket>&quot;Sim&quot;</bucket>
+                          </bucket-selection>
+                        </highlight>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Sobrevivência no Titanic por Classe Social' captured-sheet='Painel 2' id='2'>
+                    <capturedDeltas>
+                      <worksheet name='% Sobrevivência por Fare'>
+                        <selection-collection />
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Painel 2'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='49000' id='3' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='1' name='Qtd Sobrevivência por Fare' show-caption='true' w='41200' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='7' name='% Sobrevivência por Fare' show-caption='true' w='41200' x='42000' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='49000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='8250' id='6' name='Qtd Sobrevivência por Fare' pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='49000' id='8' name='Sobrevivência por Titulo' show-caption='true' w='98400' x='800' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Relação de Sobrevivência'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' />
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[sum:Number of Records:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Relação de Sobrevivência por Sexo'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='% de Sobrevivência por Idade'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Distribuição por Idade e Sexo da Sobrevivência'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131945562120:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' name='Dash1'>
+      <viewpoints>
+        <viewpoint name='% de Sobrevivência por Idade'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Distribuição por Idade e Sexo da Sobrevivência'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Relação de Sobrevivência'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Relação de Sobrevivência por Sexo'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' name='Qtd Sobrevivência por Fare'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='% Sobrevivência por Fare'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sobrevivência por Titulo'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.13gmn791k7e2wf1am0wig19mpyoh].[none:Calculation_668503131946356749:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' name='Painel 2'>
+      <viewpoints>
+        <viewpoint name='% Sobrevivência por Fare'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Qtd Sobrevivência por Fare'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sobrevivência por Titulo'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='7' />
+    </window>
+    <window class='dashboard' maximized='true' name='História 1'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+  </windows>
+</workbook>
